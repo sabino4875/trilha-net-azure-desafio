@@ -1,11 +1,29 @@
 namespace TrilhaNetAzureDesafio.Models
 {
-    public class Funcionario
+    using System;
+    public class Funcionario : IEntity
     {
         public Funcionario() { }
 
-        public Funcionario(int id, string nome, string endereco, string ramal, string emailProfissional, string departamento, decimal salario, DateTime dataAdmissao)
+        public Funcionario(Guid id, 
+                           String nome, 
+                           String endereco, 
+                           String ramal, 
+                           String emailProfissional, 
+                           String departamento, 
+                           Decimal salario, 
+                           DateTimeOffset dataAdmissao
+        )
         {
+            ArgumentNullException.ThrowIfNull(id);
+            ArgumentNullException.ThrowIfNull(nome);
+            ArgumentNullException.ThrowIfNull(endereco);
+            ArgumentNullException.ThrowIfNull(ramal);
+            ArgumentNullException.ThrowIfNull(emailProfissional);
+            ArgumentNullException.ThrowIfNull(departamento);
+            ArgumentNullException.ThrowIfNull(salario);
+            ArgumentNullException.ThrowIfNull(dataAdmissao);
+
             Id = id;
             Nome = nome;
             Endereco = endereco;
@@ -16,13 +34,42 @@ namespace TrilhaNetAzureDesafio.Models
             DataAdmissao = dataAdmissao;
         }
 
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Endereco { get; set; }
-        public string Ramal { get; set; }
-        public string EmailProfissional { get; set; }
-        public string Departamento { get; set; }
-        public decimal Salario { get; set; }
-        public DateTimeOffset? DataAdmissao { get; set; }
+        public Funcionario(
+                   String nome,
+                   String endereco,
+                   String ramal,
+                   String emailProfissional,
+                   String departamento,
+                   Decimal salario,
+                   DateTimeOffset dataAdmissao
+)
+        {
+            ArgumentNullException.ThrowIfNull(nome);
+            ArgumentNullException.ThrowIfNull(endereco);
+            ArgumentNullException.ThrowIfNull(ramal);
+            ArgumentNullException.ThrowIfNull(emailProfissional);
+            ArgumentNullException.ThrowIfNull(departamento);
+            ArgumentNullException.ThrowIfNull(salario);
+            ArgumentNullException.ThrowIfNull(dataAdmissao);
+
+            Id = Guid.NewGuid();
+            Nome = nome;
+            Endereco = endereco;
+            Ramal = ramal;
+            EmailProfissional = emailProfissional;
+            Departamento = departamento;
+            Salario = salario;
+            DataAdmissao = dataAdmissao;
+        }
+
+
+        public Guid Id { get; set; }
+        public String Nome { get; set; }
+        public String Endereco { get; set; }
+        public String Ramal { get; set; }
+        public String EmailProfissional { get; set; }
+        public String Departamento { get; set; }
+        public Decimal Salario { get; set; }
+        public DateTimeOffset DataAdmissao { get; set; }
     }
 }

@@ -1,0 +1,22 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "DatabaseConnection": {
+    "localDb": true,
+    "DataSource": "MSSQLLocalDB",
+    "InitialCatalog": "TrilhaApiDesafioAzureDB",
+    "DatabaseName": "TrilhaApiDesafioAzureDB"
+  },
+  "AzureTableStorage": {
+    "Url": "http://127.0.0.1:10002",
+    "UserAccount": "devstoreaccount1",
+    "UserKey": "Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==",
+    "TableName": "FuncionarioLog"
+  }
+
+}
