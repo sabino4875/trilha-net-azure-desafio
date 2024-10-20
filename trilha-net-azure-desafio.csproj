@@ -1,20 +1,43 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>disable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>trilha_net_azure_desafio</RootNamespace>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <ImplicitUsings>disable</ImplicitUsings>
+	  <Nullable>disable</Nullable>
+	  <PublishRelease>true</PublishRelease>
+	  <PackageId>TrilhaNetAzureDesafio</PackageId>
+	  <RootNamespace>TrilhaNetAzureDesafio</RootNamespace>
+	  <Version>1.0.1</Version>
+	  <Authors>Leonardo Buta</Authors>
+	  <Company>Dio</Company>
+	  <GenerateDocumentationFile>false</GenerateDocumentationFile>
+	  <DocumentationFile>documentation/desafio.xml</DocumentationFile>
+	  <AnalysisMode>All</AnalysisMode>
+	  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Data.Tables" Version="12.6.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Azure.Data.Tables" Version="12.9.1" />
+    <PackageReference Include="Azure.Storage.Common" Version="12.21.1" />
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.24.0" />
+    <PackageReference Include="Serilog" Version="4.0.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 
 </Project>
